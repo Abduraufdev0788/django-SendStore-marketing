@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videolar | SendStore</title>
+  <link rel="stylesheet" href='{% static "style.css" %}'>
+</head>
+<body>
+  <header>🎬 Videolar</header>
+
+  <div class="categories">
+    <div class="category">Barcha videolar</div>
+    <div class="category">Saralanganlar</div>
+    <div class="category">Yaqinda qo‘shilganlar</div>
+    <div class="category">Trenddagilar</div>
+  </div>
+
+  <div class="video-container">
+    <div class="video-card">
+      <video controls>
+        <source src="video1.mp4" type="video/mp4">
+        Brauzeringiz video formatni qo‘llab-quvvatlamaydi.
+      </video>
+      <div class="video-info">
+        <h3>Tabiat go‘zalligi</h3>
+        <button class="download-btn">⬇ Yuklab olish</button>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="video2.mp4" type="video/mp4">
+      </video>
+      <div class="video-info">
+        <h3>Shahar manzaralari</h3>
+        <button class="download-btn">⬇ Yuklab olish</button>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls>
+        <source src="video3.mp4" type="video/mp4">
+      </video>
+      <div class="video-info">
+        <h3>Texnologiya dunyosi</h3>
+        <button class="download-btn">⬇ Yuklab olish</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

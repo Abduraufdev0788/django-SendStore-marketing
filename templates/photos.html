@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rasmlar | CloudMedia</title>
+  <link rel="stylesheet" href='{% static "style.css" %}' />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">🌩 CloudMedia</div>
+    <nav>
+      <a href="index.html">Bosh sahifa</a>
+      <a class="active" href="photos.html">Rasmlar</a>
+      <a href="#">Videolar</a>
+      <a href="#">Notes</a>
+      <a href="#">Aloqa</a>
+    </nav>
+  </header>
+
+  <!-- Bo‘limlar -->
+  <section class="photo-sections">
+    <button class="tab active">📁 Barchasi</button>
+    <button class="tab">⭐ Saralanganlar</button>
+    <button class="tab">🗑️ Chiqindidon</button>
+    <button class="upload-btn">📤 Rasm yuklash</button>
+  </section>
+
+  <!-- Rasm kartalari -->
+  <section class="photo-gallery">
+    <div class="photo-card">
+      <img src="sample1.jpg" alt="Rasm 1" />
+      <div class="photo-info">
+        <p class="tags">#tabiat #tog‘</p>
+        <p class="desc">Tog‘ manzarasi — tabiiy go‘zallik.</p>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <img src="sample2.jpg" alt="Rasm 2" />
+      <div class="photo-info">
+        <p class="tags">#shahar #kecha</p>
+        <p class="desc">Kecha shahridagi chiroqlar jozibasi.</p>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <img src="sample3.jpg" alt="Rasm 3" />
+      <div class="photo-info">
+        <p class="tags">#tabiat #gul</p>
+        <p class="desc">Bahorning eng chiroyli guli.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 CloudMedia. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+  <script>
+    // Bo‘limlar uchun aktivlik animatsiyasi
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
